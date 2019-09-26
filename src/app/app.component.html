@@ -4,13 +4,12 @@
   </div>  
   <hr>
   <div class="enlacesTable">
-        <a >COCHES</a> &nbsp;&nbsp;
-        <a >MOTOS</a>
-    
+     <a [routerLink]="['/']">INICIO</a> &nbsp;&nbsp;
+      <a [routerLink]="['coches']">COCHES</a> &nbsp;&nbsp;
+      <a [routerLink]="['motos']">MOTOS</a>
   </div>  
 </div>
 
-  <router-outlet></router-outlet>
-
-
-
+<div class="cabecera">
+<router-outlet></router-outlet>
+</div>
