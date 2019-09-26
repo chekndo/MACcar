@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+div {
+    background-color: #81BEF7;
+    padding: 30px;
+}
+.nomWeb {
+    font-size: 5em;
+    color: #0000FF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+
+.enlaces {
+    float: right;
+    color: #add0ee;
+}
+.enlaces a {
+    color: white;
+    text-decoration: none;
+}
+.enlaces a:hover {
+    text-decoration: underline;
+}
+.content {
+    padding: 20px;
+}
