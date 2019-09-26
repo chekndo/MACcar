@@ -1,30 +1,58 @@
-div {
+.cabecera {
     background-color: #81BEF7;
     padding: 30px;
+    text-align: center;
+    text-align-last: center;
+    background-origin: padding-box;
+    width: 100%;
 }
 .nomWeb {
     font-size: 5em;
     color: #0000FF;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Latin Modern Roman 10";
+    font-style: oblique;
+    font-weight: inherit;
     display: inline-block;
 }
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
 }
-
-
-.enlaces {
-    float: right;
-    color: #add0ee;
+.nameTable {
+    text-align: center;
+    text-align-last: center;
+    background-origin: padding-box;
+    width: 100%;
+    
 }
-.enlaces a {
-    color: white;
+.enlacesTable {
+    text-align: center;
+    text-align-last: center;
+    background-origin: padding-box;
+    width: 100%;
+}
+.enlacesTable a {
+    font-family: verdana, arial, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #81BEF7;
+    color: #0000FF;
     text-decoration: none;
+    text-align: center;
+    text-align-last: center;
 }
-.enlaces a:hover {
+
+.enlacesTable a:hover{
+    color:#81BEF7;
+    background-color: #0000FF;
+    font-weight: bold;
     text-decoration: underline;
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+    text-align: center;
+    text-align-last: center;
 }
-.content {
-    padding: 20px;
-}
+
