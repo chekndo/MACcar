@@ -1,17 +1,20 @@
 <div class="detalle">
-    <table>
-        <tr>
-            <td class="enlaces"> 
-                <a> Coche 1 </a><br><br>
-                <a> Coche 2 </a><br><br>
-                <a> Coche 3 </a><br><br>
-                <a> Coche 4 </a><br><br>
-                <a> Coche 5 </a><br><br>
-                <a> Coche 6 </a>               
-            </td>
-            <td>
-                <textarea class="textArea">Aqui descripcion al seleccionar boton </textarea>
-            </td>
-        </tr>
-    </table>
-</div>
+        <table>
+            <tr>
+                <td> 
+                    <div *ngFor="let coche of coches; index as i " class="enlaces"> 
+                            <table>
+                                <tr >
+                                    <td ><a> {{coche.marca}} - {{coche.modelo}}</a></td>
+                                </tr>
+                                <tr><td></td></tr><tr><td></td></tr>
+                            </table>            
+                    </div>           
+                </td>
+                <td>
+                    <textarea class="textArea">Aqui descripcion al seleccionar boton </textarea>
+                </td>
+            </tr>
+        </table>
+           
+    </div>
