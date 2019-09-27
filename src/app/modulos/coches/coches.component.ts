@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-coches',
@@ -7,21 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CochesComponent implements OnInit {
 
+  @Output()
+  pulsar = new EventEmitter<any>();
+
+
   coches: any[];
   constructor() {
     const coches1={
+      id: 1,
       marca: 'Mustang',
       modelo: 'GT-500',
       año: '1968',
       cilindrada: '5800cc'
     }
     const coches2={
+      id: 2,
       marca: 'Nissan',
       modelo: 'Skyline',
       año: '1999',
       cilindrada: '2600cc'
     }
     const coches3={
+      id: 3,
       marca: 'Audi',
       modelo: 'RS5',
       año: '2017',
@@ -35,6 +42,10 @@ export class CochesComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  verDet(coche){
+    this.pulsar.emit(coche);
   }
 
 }

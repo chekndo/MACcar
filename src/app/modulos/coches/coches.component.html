@@ -5,7 +5,7 @@
                     <div *ngFor="let coche of coches; index as i " class="enlaces"> 
                             <table>
                                 <tr >
-                                    <td ><a> {{coche.marca}} - {{coche.modelo}}</a></td>
+                                    <td ><a (pulsar)="verDet(coche)"> {{coche.marca}}  {{coche.modelo}}</a></td>
                                 </tr>
                                 <tr><td></td></tr><tr><td></td></tr>
                             </table>            

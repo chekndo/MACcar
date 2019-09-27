@@ -8,8 +8,8 @@ import { ModulosModule } from './modulos/modulos.module';
 
 const routes: Routes = [
   { path: '', component: VentanadetalleComponent },
-  { path: 'coches', component: CochesComponent },
-  { path: 'motos', component: MotosComponent }
+  { path: 'coches', component: VentanadetalleComponent },
+  { path: 'motos', component: VentanadetalleComponent }
 ];
 
 

@@ -12,4 +12,8 @@ export class VentanadetalleComponent implements OnInit {
   ngOnInit() {
   }
 
+  verDetalle(coche){
+    this.verDetalle(coche);
+  }
+
 }
