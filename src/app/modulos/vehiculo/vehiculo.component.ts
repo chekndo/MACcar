@@ -107,12 +107,20 @@ export class VehiculoComponent implements OnInit {
     this.tipoVehiculo = '';
   }
 
+  cambiarEstadoAnt() {
+    if (this.tipoVehiculo === "COCHES")
+      {this.botonCar = true;}
+    if (this.tipoVehiculo === "MOTOS")
+      {this.botonMot = false;}
+    this.detVehiculo = false;
+    this.tipoVehiculo = '';
+  }
+
   pasarEditado() {
     this.editando = true;
     this.botonCar = false;
     this.botonMot = false;
     this.detVehiculo = false;
-    this.tipoVehiculo = '';
   }
 
   verDeta(vehiDet){
@@ -123,6 +131,10 @@ export class VehiculoComponent implements OnInit {
   editarVehiculo(vehiculo){
     this.vehiculoDetalle =vehiculo;
     this.editando = false;
+    if (this.tipoVehiculo === "COCHES")
+    {this.botonCar = true;}
+    if (this.tipoVehiculo === "MOTOS")
+    {this.botonMot = false;}
   }
 
   agregarVehiculo(tipo){

@@ -13,13 +13,10 @@
         <tr><td>
             <div  *ngIf="botonCar==!false || botonMot==!false">
                 <app-list-vehiculo [tipo]="tipoVehiculo" [vehiculos]="listVehiculos" [detVehiculo]="detVehiculo" (verDet)="verDeta($event)"></app-list-vehiculo>
-                <br><br><hr>
-                <a class="botones" (click)="cambiarEstadoIni()"> Volver </a>&nbsp;&nbsp;
-                <a class="botones" detVehiculo &&(click)=" agregarVehiculo(tipoVehiculo)"> Añadir </a>
+                <br><br><hr *ngIf="!detVehiculo">
+                <a class="botones" *ngIf="!detVehiculo" (click)="cambiarEstadoIni()"> Volver </a> &nbsp;&nbsp;
+                <a class="botones" *ngIf="!detVehiculo" (click)="agregarVehiculo(tipoVehiculo)"> Añadir </a>
             </div>
-           <!-- <div *ngIf="detVehiculo==false">-->
-                
-         <!--   </div> -->
         </td><td>
             <div  *ngIf="detVehiculo">
                 <app-detalle-vehiculo [vehiculo]="vehiculoDetalle"></app-detalle-vehiculo>
@@ -36,7 +33,7 @@
                     <td *ngIf="botonMot==true"><p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="borrarVehiculo(vehiculoDetalle,tipoVehiculo)"> Borrar </p></td>
                 </tr>
             </table>
-            <p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="cambiarEstadoIni()"> Volver </p>
+            <p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="cambiarEstadoAnt()"> Volver </p>
     </div>
 </div>
 <div class="textIni" *ngIf="editando==true">
