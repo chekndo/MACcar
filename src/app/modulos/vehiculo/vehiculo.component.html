@@ -1,8 +1,8 @@
-<div class="textIni">
+<div class="textIni" *ngIf="editando==false && agregar==false">
     <div *ngIf="botonCar==false && botonMot == false"  class="enlacesMenu">
             <BR><BR>
         SELECCIONE QUE VEHICULOS QUIERE MOSTRAR <BR><BR><BR><BR><BR>
-        <a (click)="cambiarEstadoCar()"> COCHES </a>
+        <a (click)="cambiarEstadoCar()"> COCHES </a>&nbsp;&nbsp;
         <a (click)="cambiarEstadoMot()"> MOTOS </a><BR><BR><BR><BR>
     </div>
     <div class="titPantalla" *ngIf="botonCar!=false || botonMot != false">
@@ -12,17 +12,48 @@
     <table>
         <tr><td>
             <div  *ngIf="botonCar==!false || botonMot==!false">
-                <app-list-vehiculo [tipo]="tipoVehiculo" [vehiculos]="listVehiculos" [detVehiculo]="detVehiculo" (verDet)="verDet($event)"></app-list-vehiculo>
+                <app-list-vehiculo [tipo]="tipoVehiculo" [vehiculos]="listVehiculos" [detVehiculo]="detVehiculo" (verDet)="verDeta($event)"></app-list-vehiculo>
+                <br><br><hr>
+                <a class="botones" (click)="cambiarEstadoIni()"> Volver </a>&nbsp;&nbsp;
+                <a class="botones" detVehiculo &&(click)=" agregarVehiculo(tipoVehiculo)"> Añadir </a>
             </div>
+           <!-- <div *ngIf="detVehiculo==false">-->
+                
+         <!--   </div> -->
         </td><td>
-            <div  *ngIf="detVehiculo==!false">
+            <div  *ngIf="detVehiculo">
                 <app-detalle-vehiculo [vehiculo]="vehiculoDetalle"></app-detalle-vehiculo>
             </div>
         </td></tr>
     </table>
-    <div  *ngIf="botonMot==true || botonCar==true">
-        <br><br><br>
+    <div  *ngIf="botonMot==true || botonCar==true" class="titPantalla">
+        <br>
         <hr *ngIf="detVehiculo && VehiculoDet===vehiculo" >
-        <p class="botonVolver" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="cambiarEstadoIni()"> Volver </p>   
+            <table>
+                <tr>
+                    <td><p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="pasarEditado()"> Editar </p>   </td>
+                    <td *ngIf="botonCar==true"><p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="borrarVehiculo(vehiculoDetalle,tipoVehiculo)"> Borrar </p> </td>
+                    <td *ngIf="botonMot==true"><p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="borrarVehiculo(vehiculoDetalle,tipoVehiculo)"> Borrar </p></td>
+                </tr>
+            </table>
+            <p class="botones" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="cambiarEstadoIni()"> Volver </p>
     </div>
+</div>
+<div class="textIni" *ngIf="editando==true">
+    
+    <table>
+        <tr>
+            <td><app-edit-vehiculo [vehiculo]="vehiculoDetalle" (edit)="editarVehiculo($event)"></app-edit-vehiculo></td>
+            <td><app-detalle-vehiculo [vehiculo]="vehiculoDetalle"></app-detalle-vehiculo></td>
+        </tr>
+    </table>
+</div>
+<div class="textIni" *ngIf="agregar==true">
+    
+    <table>
+        <tr>
+            <td><app-alta-vehiculo [tipo]="tipoVehiculo" [vehiculo]="vehiculoDetalle" (alta)="altaVehiculo($event)"></app-alta-vehiculo></td>
+            <td><app-detalle-vehiculo [vehiculo]="vehiculoDetalle"></app-detalle-vehiculo></td>
+        </tr>
+    </table>
 </div>

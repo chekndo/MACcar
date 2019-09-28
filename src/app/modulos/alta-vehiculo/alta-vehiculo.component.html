@@ -1,0 +1,33 @@
+<p><table>
+    <tr>
+        <td> Marca: </td>
+        <td><input type="text" [(ngModel)]="vehiculo.marca"></td>
+    </tr>
+    <tr>
+        <td> Modelo: </td>
+        <td> <input type="text" [(ngModel)]="vehiculo.modelo"></td>
+    </tr>
+    <tr>
+        <td> Cilindrada: </td>
+        <td> <input type="text" [(ngModel)]="vehiculo.cilindrada"></td>
+    </tr>
+    <tr>
+        <td> Caballos: </td>
+        <td> <input type="text" [(ngModel)]="vehiculo.caballos"></td>
+    </tr>
+    <tr>
+        <td> Año: </td>
+        <td> <input type="text" [(ngModel)]="vehiculo.anyo"></td>
+    </tr>
+    <tr>
+        <td> Color: </td>
+        <td> <input type="text" [(ngModel)]="vehiculo.color"></td>
+    </tr>
+    <tr>
+        <td> Precio: </td>
+        <td> <input type="text" [(ngModel)]="vehiculo.precio"></td>
+    </tr>
+</table>
+<p>
+<a class="botones"  (click)="altaVehiculo(vehiculo)"> Guardar </a>   
+</p>
