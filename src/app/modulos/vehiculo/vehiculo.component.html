@@ -1,0 +1,25 @@
+<div class="textIni">
+    <div *ngIf="botonCar==false && botonMot == false"  class="enlacesMenu">
+            <BR><BR>
+        SELECCIONE QUE VEHICULOS QUIERE MOSTRAR <BR><BR><BR><BR><BR>
+        <a (click)="cambiarEstadoCar()"> COCHES </a>
+        <a (click)="cambiarEstadoMot()"> MOTOS </a><BR><BR><BR><BR>
+        <hr>
+    </div>
+
+    <table>
+        <tr><td>
+            <div  *ngIf="botonCar==!false || botonMot==!false">
+                <app-list-vehiculo [tipo]="tipoVehiculo" [vehiculos]="listVehiculos" [detVehiculo]="detVehiculo" (verDet)="verDet($event)"></app-list-vehiculo>
+            </div>
+        </td><td>
+            <div  *ngIf="detVehiculo==!false">
+                <app-detalle-vehiculo [vehiculo]="vehiculoDetalle"></app-detalle-vehiculo>
+            </div>
+        </td></tr>
+    </table>
+    <div  *ngIf="botonMot==true || botonCar==true">
+        <br><br><br>
+        <input type="button" (click)="cambiarEstadoIni()" value="<< Volver">
+    </div>
+</div>

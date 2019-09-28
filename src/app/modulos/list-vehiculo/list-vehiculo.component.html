@@ -1,0 +1,10 @@
+<div class="titPantalla">
+    {{tipo}} DISPONIBLES
+</div>
+<br><br><br>
+<div *ngFor="let vehiculo of vehiculos" class="enlacesVehiculo" >
+        <a (click)="verDetalle(vehiculo)"> {{vehiculo.marca}}  {{vehiculo.modelo}}</a> <br><br>       
+</div>           
+
+
+         
