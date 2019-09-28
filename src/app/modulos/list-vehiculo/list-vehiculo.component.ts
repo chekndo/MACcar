@@ -19,6 +19,8 @@ export class ListVehiculoComponent implements OnInit {
   @Output ()
   verDet = new EventEmitter<any>();
 
+  VehiculoDet;
+
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +31,7 @@ export class ListVehiculoComponent implements OnInit {
   }
 
   verDetalle (vehi){
-    this.verDet.emit(vehi)
+    this.verDet.emit(vehi);
+    this.VehiculoDet = vehi;
   }
 }

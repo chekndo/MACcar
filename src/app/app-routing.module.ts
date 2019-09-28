@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { VentanadetalleComponent } from './modulos/ventanadetalle/ventanadetalle.component';
-import { CochesComponent } from './modulos/coches/coches.component';
-import { MotosComponent } from './modulos/motos/motos.component';
 import { ModulosModule } from './modulos/modulos.module';
-
+import { InicioComponent } from './modulos/inicio/inicio.component';
+import { VehiculoComponent } from './modulos/vehiculo/vehiculo.component';
+import { ConectarseComponent } from './modulos/conectarse/conectarse.component';
 
 const routes: Routes = [
-  { path: '', component: VentanadetalleComponent },
-  { path: 'coches', component: VentanadetalleComponent },
-  { path: 'motos', component: VentanadetalleComponent }
+  { path: '', component: InicioComponent },
+  { path: 'vehiculos', component: VehiculoComponent },
+  { path: 'login', component: ConectarseComponent }
 ];
 
 

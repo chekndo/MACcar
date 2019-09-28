@@ -1,39 +1,15 @@
-.frameMenu {
-    background-color: #CEE3F6;
-    text-align: center;
-    text-align-last: center;
-    background-origin: padding-box;
-    width: auto;
-    height: auto;    
-
-}
-
-.nomMenu {
-    font-size: 8em;
+.textIni {
+    font-size: 5mm ;
     color: #08088A;
     font-family: "Latin Modern Roman 10";
     font-style: oblique;
     font-weight: inherit;
     display: inline-block;
-}
-.divMenu {
+    text-decoration: none;
     text-align: center;
     text-align-last: center;
-    background-origin: padding-box;
-    width: auto;
 }
-.logo {
-    width: 120px;
-    height: 120px;
-}
-
-.enlacesMenu {
-    text-align: center;
-    text-align-last: center;
-    background-origin: padding-box;
-    width: 100%;
-}
-.enlacesMenu a {
+.botones{
     font-family: verdana, arial, sans-serif;
     font-weight: bold;
     padding: 4px;
@@ -41,14 +17,14 @@
     color: #08088A;
     text-decoration: none;
     text-align: center;
-    text-align-last: center;    
+    text-align-last: center;
     border-bottom: 1px solid #666666;
     border-top: 2px solid #cccccc;
     border-right: 1px solid #666666;
     border-left: 2px solid #cccccc;
 }
 
-.enlacesMenu a:hover{
+.botones:hover{
     color:#CEE3F6;
     background-color: #08088A;
     font-weight: bold;
@@ -60,4 +36,3 @@
     text-align: center;
     text-align-last: center;
 }
-

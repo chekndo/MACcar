@@ -2,16 +2,16 @@
     font-family: verdana, arial, sans-serif;
     font-weight: bold;
     padding: 4px;
-    background-color: #81BEF7;
-    color: #0000FF;
+    background-color: #CEE3F6;
+    color: #08088A;
     text-decoration: none;
     text-align: center;
     text-align-last: center;
 }
 
 .enlacesVehiculo a:hover{
-    color:#81BEF7;
-    background-color: #0000FF;
+    color:#CEE3F6;
+    background-color: #08088A;
     font-weight: bold;
     text-decoration: underline;
     border-bottom: 1px solid #cccccc;
@@ -23,9 +23,51 @@
 }
 .textIni {
     font-size: 5mm ;
-    color: #0000FF;
+    color: #08088A;
     font-family: "Latin Modern Roman 10";
     font-style: oblique;
     font-weight: inherit;
     display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-align-last: center;
+}
+.titPantalla {
+    font-size: 1em;
+    color: #08088A;
+    font-family: "Latin Modern Roman 10";
+    font-style: oblique;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-align-last: center;
+    align-self: center;
+}
+.botonVolver{
+    font-family: verdana, arial, sans-serif;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #CEE3F6;
+    color: #08088A;
+    text-decoration: none;
+    text-align: center;
+    text-align-last: center;
+    border-bottom: 1px solid #666666;
+    border-top: 2px solid #cccccc;
+    border-right: 1px solid #666666;
+    border-left: 2px solid #cccccc;
+}
+
+.botonVolver:hover{
+    color:#CEE3F6;
+    background-color: #08088A;
+    font-weight: bold;
+    text-decoration: underline;
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #666666;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #666666;
+    text-align: center;
+    text-align-last: center;
 }

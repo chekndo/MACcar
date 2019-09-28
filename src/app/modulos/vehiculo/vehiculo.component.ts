@@ -7,6 +7,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class VehiculoComponent implements OnInit {
 
+  @Input()
+  rolVisor;
+
   coches = [
     {marca: 'Ford', 
      modelo: 'Mustang',

@@ -4,11 +4,13 @@ import { InicioComponent } from './inicio/inicio.component';
 import { VehiculoComponent } from './vehiculo/vehiculo.component';
 import { ListVehiculoComponent } from './list-vehiculo/list-vehiculo.component';
 import { DetalleVehiculoComponent } from './detalle-vehiculo/detalle-vehiculo.component';
+import { EditVehiculoComponent } from './edit-vehiculo/edit-vehiculo.component';
+import { ConectarseComponent } from './conectarse/conectarse.component';
 
 
 
 @NgModule({
-  declarations: [InicioComponent, VehiculoComponent, ListVehiculoComponent, DetalleVehiculoComponent],
+  declarations: [InicioComponent, VehiculoComponent, ListVehiculoComponent, DetalleVehiculoComponent, EditVehiculoComponent, ConectarseComponent],
   imports: [
     CommonModule
   ]

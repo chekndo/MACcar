@@ -4,7 +4,9 @@
         SELECCIONE QUE VEHICULOS QUIERE MOSTRAR <BR><BR><BR><BR><BR>
         <a (click)="cambiarEstadoCar()"> COCHES </a>
         <a (click)="cambiarEstadoMot()"> MOTOS </a><BR><BR><BR><BR>
-        <hr>
+    </div>
+    <div class="titPantalla" *ngIf="botonCar!=false || botonMot != false">
+            {{tipoVehiculo}} DISPONIBLES
     </div>
 
     <table>
@@ -20,6 +22,7 @@
     </table>
     <div  *ngIf="botonMot==true || botonCar==true">
         <br><br><br>
-        <input type="button" (click)="cambiarEstadoIni()" value="<< Volver">
+        <hr *ngIf="detVehiculo && VehiculoDet===vehiculo" >
+        <p class="botonVolver" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="cambiarEstadoIni()"> Volver </p>   
     </div>
 </div>

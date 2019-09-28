@@ -1,38 +1,38 @@
-.titPantalla {
-    font-size: 1em;
-    color: #0000FF;
+.enlacesVehiculo{
     font-family: "Latin Modern Roman 10";
-    font-style: oblique;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.enlacesVehiculo {
-    text-align: center;
-    text-align-last: center;
-    background-origin: padding-box;
-    width: 100%;
-}
-.enlacesVehiculo a {
-    font-family: verdana, arial, sans-serif;
     font-weight: bold;
     padding: 4px;
-    background-color: #81BEF7;
-    color: #0000FF;
+    background-color: #CEE3F6;
+    color: #08088A;
     text-decoration: none;
     text-align: center;
     text-align-last: center;
+    border-bottom: 1px solid #666666;
+    border-top: 2px solid #cccccc;
+    border-right: 1px solid #666666;
+    border-left: 2px solid #cccccc;
 }
 
-.enlacesVehiculo a:hover{
-    color:#81BEF7;
-    background-color: #0000FF;
+.enlacesVehiculo:hover{
+    color:#CEE3F6;
+    background-color: #08088A;
     font-weight: bold;
-    text-decoration: underline;
     border-bottom: 1px solid #cccccc;
     border-top: 2px solid #666666;
     border-right: 1px solid #cccccc;
     border-left: 2px solid #666666;
     text-align: center;
     text-align-last: center;
+}
+.vehiculoDet {
+    color:#CEE3F6;
+    font-family: "Latin Modern Roman 10";
+    background-color: #08088A;
+    font-weight: bold;
+    text-align: center;
+    text-align-last: center;
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 2px solid #cccccc;
 }

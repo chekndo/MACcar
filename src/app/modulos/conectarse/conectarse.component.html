@@ -1,0 +1,40 @@
+<div class="textIni">
+        <div>
+            <BR><BR>
+            <b>DATOS DE ACCESO </b><BR>
+            <hr>
+        </div>
+        <div class="titPantalla" >
+            <form>
+                <table>
+                    <tr><td>Usuario: </td><td><input type="text" name="usuario"></td></tr>
+                    <tr><td>Contraseña: </td><td><input type="password" name="contraseña"></td></tr>
+                    <tr><td><p class="botones"  (click)="cambiarEstadoIni()"> Enviar </p>   </td>
+                    <td><p class="botones"  (click)="cambiarEstadoIni()"> Borrar </p></td></tr>  
+                    
+        
+                </table>
+            </form>
+        </div>
+
+
+
+
+    
+        <table>
+            <tr><td>
+                <div  *ngIf="botonCar==!false || botonMot==!false">
+                    <app-list-vehiculo [tipo]="tipoVehiculo" [vehiculos]="listVehiculos" [detVehiculo]="detVehiculo" (verDet)="verDet($event)"></app-list-vehiculo>
+                </div>
+            </td><td>
+                <div  *ngIf="detVehiculo==!false">
+                    <app-detalle-vehiculo [vehiculo]="vehiculoDetalle"></app-detalle-vehiculo>
+                </div>
+            </td></tr>
+        </table>
+        <div  *ngIf="botonMot==true || botonCar==true">
+            <br><br><br>
+            <hr *ngIf="detVehiculo && VehiculoDet===vehiculo" >
+            <p class="botonVolver" *ngIf="detVehiculo && VehiculoDet===vehiculo" (click)="cambiarEstadoIni()"> Volver </p>   
+        </div>
+    </div>
