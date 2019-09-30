@@ -145,11 +145,11 @@ export class VehiculoComponent implements OnInit {
   altaVehiculo(vehiculo){
     if (this.tipoVehiculo === 'COCHES')
     {
-      this.coches.unshift(vehiculo);
+      this.coches.push(vehiculo);
       this.listVehiculos = this.coches
     }
     else if (this.tipoVehiculo === 'MOTOS'){
-      this.motos.unshift(vehiculo);
+      this.motos.push(vehiculo);
       this.listVehiculos = this.motos;
     } 
     this.agregar = false;
