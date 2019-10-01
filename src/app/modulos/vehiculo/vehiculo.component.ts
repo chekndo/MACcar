@@ -143,6 +143,9 @@ export class VehiculoComponent implements OnInit {
   }
 
   altaVehiculo(vehiculo){
+    
+    vehiculo.id = this.listVehiculos.length + 1;
+
     if (this.tipoVehiculo === 'COCHES')
     {
       this.coches.push(vehiculo);
@@ -156,7 +159,8 @@ export class VehiculoComponent implements OnInit {
   }
 
   borrarVehiculo(vehiculo){
-    
+
+    console.log(vehiculo);    
     if (this.tipoVehiculo === 'COCHES')
     {
       this.coches = this.coches.filter(t => t.id !== vehiculo.id);
